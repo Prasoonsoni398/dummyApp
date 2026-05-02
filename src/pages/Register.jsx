@@ -8,14 +8,31 @@ const Login = () => {
           className="h-[90vh] w-full object-cover"
         />
       </div>
-      <div className="container flex-wrap grid gap-5 font-inter bg-white absolute xl:top-[26%] lg:top-[15%] top-[15%] lg:w-113 w-70 md:w-100 left-[6.2%]  rounded-xl py-6 lg:px-10 p-6">
+      <div className="container flex-wrap grid gap-5 font-inter bg-white absolute xl:top-[20%] lg:top-[15%] top-[12%] lg:w-113 w-70 md:w-100 right-[6.2%]  rounded-xl py-6 lg:px-10 p-6">
         <div>
           <h1 className="text-(--color-primary) text-3xl text-center font-bold">
-            Welcome Back
+            Create Account
           </h1>
           <p className="text-center text-(--color-secondary) mt-2 lg:text-[16px] text-sm">
-            Login to your Cravings account
+            Join us as a Customer, Restaurant, or Rider
           </p>
+        </div>
+        <div className="grid gap-2 ">
+          <h4 className="text-md font-semibold opacity-75">Register as:</h4>
+          <div className="flex flex-wrap">
+            <div className="flex gap-2 mx-2">
+              <input type="radio" name="register-as" id="customer" />
+              <label htmlFor="customer">Customer</label>
+            </div>
+            <div className="flex gap-2 mx-2">
+              <input type="radio" name="register-as" id="restaurant" />
+              <label htmlFor="restaurant">Restaurant</label>
+            </div>
+            <div className="flex gap-2 mx-2">
+              <input type="radio" name="register-as" id="rider" />
+              <label htmlFor="customer">Rider</label>
+            </div>
+          </div>
         </div>
         <div className=" grid gap-2 ">
           <label htmlFor="email" className="font-semibold opacity-75">

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./Component/NavBar";
-import Footer from "./Component/Footer";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register"
 const App = () => {
