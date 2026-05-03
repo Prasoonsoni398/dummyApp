@@ -1,85 +1,72 @@
+import React from "react";
+
 const Login = () => {
   return (
     <>
-      <div className="backgroud">
+      <div className="h-screen w-full relative">
         <img
-          src="bg.png"
-          alt="bg-image"
-          className="h-[90vh] w-full object-cover"
+          src="login-register-bg.png"
+          alt="bg"
+          className="h-full w-full object-cover"
         />
       </div>
-      <div className="container flex-wrap grid gap-5 font-inter bg-white absolute xl:top-[26%] lg:top-[15%] top-[15%] lg:w-113 w-70 md:w-100 left-[6.2%]  rounded-xl py-6 lg:px-10 p-6">
-        <div>
-          <h1 className="text-(--color-primary) text-3xl text-center font-bold">
-            Welcome Back
-          </h1>
-          <p className="text-center text-(--color-secondary) mt-2 lg:text-[16px] text-sm">
-            Login to your Cravings account
-          </p>
-        </div>
-        <div className=" grid gap-2 ">
-          <label htmlFor="email" className="font-semibold opacity-75">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            className="w-full  border border-0.5 border-(--color-base-300) px-3 py-2 rounded placeholder:text-(--color-secondary) placeholder:opacity-90 text-sm focus:outline-(--color-primary)  "
-          />
-        </div>
-        <div className=" grid gap-2 ">
-          <label htmlFor="password" className="font-semibold opacity-75">
-            Password
-          </label>
-          <div className=" border border-0.5 border-(--color-base-300)  px-3 py-2 rounded placeholder:text-(--color-secondary)placeholder:opacity-90 text-sm flex focus-within:outline-(--color-primary) focus-within:outline-2">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Enter your password"
-              className="w-full outline-none"
-            />
-            <i className="bi bi-eye-fill opacity-85 hover:text-(--color-primary)"></i>
+
+      <div className="absolute top-0 left-[6%] h-screen flex items-center px-4">
+        <div className="w-[80vw] sm:w-100  bg-white rounded-xl py-6 px-6 lg:px-10 shadow-lg grid gap-5 font-inter">
+          <div>
+            <h1 className="text-(--color-primary) text-3xl text-center font-bold">
+              Welcome Back
+            </h1>
+            <p className="text-center text-(--color-secondary) mt-2 text-sm">
+              Login to your Cravings account
+            </p>
           </div>
-        </div>
-        <div className="flex justify-between ">
-          <div className="flex lg:gap-2 gap-1 items-center">
+
+          <div className="grid gap-2">
+            <label className="font-semibold opacity-75">Email</label>
             <input
-              type="checkbox"
-              id="remember"
-              className="scale-85 lg:scale-90"
+              type="email"
+              placeholder="Enter your email"
+              className="w-full border border-gray-300 px-3 py-2 rounded text-sm focus:outline-(--color-primary)"
             />
-            <label
-              htmlFor="remember"
-              className="text-(--color-secondary)  lg:text-md text-sm"
-            >
+          </div>
+
+          <div className="grid gap-2">
+            <label className="font-semibold opacity-75">Password</label>
+            <div className="flex border border-gray-300 px-3 py-2 rounded text-sm focus-within:outline-(--color-primary)">
+              <input
+                type="password"
+                placeholder="Enter your password"
+                className="w-full outline-none"
+              />
+              <i className="bi bi-eye-fill opacity-80 cursor-pointer"></i>
+            </div>
+          </div>
+
+          <div className="flex justify-between text-sm">
+            <label className="flex items-center gap-2">
+              <input type="checkbox" />
               Remember
             </label>
-          </div>
-          <div>
-            <a
-              href=""
-              className="text-(--color-primary) hover:underline lg:text-md text-sm"
-            >
+            <a href="#" className="text-(--color-primary) hover:underline">
               Forgot Password?
             </a>
           </div>
-        </div>
-        <div>
+
           <button className="bg-(--color-primary) w-full py-2 text-white text-lg rounded-md">
             Login
           </button>
+
+          <div className="flex items-center gap-2 text-gray-500">
+            <hr className="flex-1 border-gray-400" />
+            <span className="text-sm">Don't have an account</span>
+            <hr className="flex-1 border-gray-400" />
+          </div>
+
+          <p className="text-(--color-primary) text-center text-sm hover:underline cursor-pointer">
+            Create an account
+          </p>
         </div>
-        <div className="flex text-gray-500 items-center gap-2 mt-2">
-          <hr className="lg:w-25 w-7 text-gray-400" />
-          <span>Don't have an accont</span>
-          <hr className="lg:w-25 w-7 text-gray-400" />
-        </div>
-        <p className="text-(--color-primary) text-center lg:text-md text-sm hover:underline inline">
-          Create an account
-        </p>
       </div>
     </>
   );
